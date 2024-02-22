@@ -24,15 +24,11 @@ const Header = () => {
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className={`relative ${
+                    className={`${
                       isLinkActive(link.href) ? "text-accent" : "text-light"
-                    } text-lg tracking-wider hover:text-accent transition-colors duration-400 ease-in-out`}
+                    } text-lg tracking-wider hover:text-accent transition-all duration-400 ease-in-out`}
                   >
-                    <div className="title hover:border-b-2 hover:border-accent transition-all duration-400 ease-in-out">
-                      <span className="relative inline-block transition-transform transform-gpu hover:-translate-y-2 duration-400 ease-in-out">
-                        {link.title}
-                      </span>
-                    </div>
+                    <div className="title">{link.title}</div>
                   </Link>
                 </li>
               );
