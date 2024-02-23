@@ -6,6 +6,15 @@ import { Icon } from "@iconify/react";
 import { usePathname } from "next/navigation";
 import navBarLinks from "@constants/NavbarLinks";
 import socials from "@constants/Socials";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const pathname = usePathname();
@@ -18,37 +27,60 @@ const Header = () => {
     <header>
       <nav className="flex justify-between items-center">
         <div className="links">
-          <ul className="flex gap-4">
-            {navBarLinks.map((link) => {
-              return (
-                <li key={link.id}>
-                  <Link
-                    href={link.href}
-                    className={`${
-                      isLinkActive(link.href) ? "text-accent" : "text-light"
-                    } text-lg tracking-wider hover:text-accent transition-all duration-400 ease-in-out`}
-                  >
-                    <div className="title">{link.title}</div>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <NavigationMenu>
+            <NavigationMenuList>
+              {navBarLinks.map((link) => (
+                <NavigationMenuItem key={link.id}>
+                  {link.subLinks && link.subLinks.length > 0 ? (
+                    <>
+                      <NavigationMenuTrigger>
+                        {link.title}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul
+                          className="grid gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] text-right"
+                          dir="rtl"
+                        >
+                          {link.subLinks.map((subLink) => (
+                            <li key={subLink.id}>
+                              <NavigationMenuLink
+                                href={subLink.href}
+                                active={isLinkActive(subLink.href)}
+                                className={navigationMenuTriggerStyle()}
+                              >
+                                {subLink.title}
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </>
+                  ) : (
+                    <NavigationMenuLink
+                      href={link.href}
+                      active={isLinkActive(link.href)}
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      {link.title}
+                    </NavigationMenuLink>
+                  )}
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
         <div className="socials">
           <ul className="flex gap-4">
-            {socials.map((social) => {
-              return (
-                <li key={social.id}>
-                  <a href={social.href} target="_blank" rel="noreferrer">
-                    <Icon
-                      icon={social.icon}
-                      className="text-light text-xl hover:text-accent transition-all duration-400 ease-in-out"
-                    />
-                  </a>
-                </li>
-              );
-            })}
+            {socials.map((social) => (
+              <li key={social.id}>
+                <a href={social.href} target="_blank" rel="noreferrer">
+                  <Icon
+                    icon={social.icon}
+                    className="text-light text-xl hover:text-accent transition-all duration-400 ease-in-out"
+                  />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="logo">
