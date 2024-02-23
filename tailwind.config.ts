@@ -46,6 +46,7 @@ const config = {
       },
       fontFamily: {
         body: ["Assistant", "sans-serif"],
+        secondary: ["Anta", "sans-serif"],
       },
       fontSize: {
         sm: "14px",

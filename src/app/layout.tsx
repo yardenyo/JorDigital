@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Header from "@components/Header";
+import Header from "@components/Layout/Header";
+import Pages from "@components/Layout/Pages";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
       </head>
       <body className="bg-primary font-body app">
         <Header />
+        <Pages />
         {children}
       </body>
     </html>
