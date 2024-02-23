@@ -11,9 +11,11 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1000px",
+        xl: "1440px",
       },
     },
     extend: {
@@ -46,6 +48,7 @@ const config = {
       },
       fontFamily: {
         body: ["Assistant", "sans-serif"],
+        secondary: ["Anta", "sans-serif"],
       },
       fontSize: {
         sm: "14px",

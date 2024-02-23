@@ -1,12 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta:wght@200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.page {
+  height: calc(100vh - 4rem - 4rem);
+}
+
 @layer utilities {
   .app {
-    @apply px-20 py-8;
+    @apply p-4;
+  }
+
+  .children {
+    @apply flex my-2;
+  }
+
+  .page {
+    @apply flex flex-col container mx-auto;
   }
 }
 
