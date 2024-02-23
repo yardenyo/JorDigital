@@ -38,7 +38,7 @@ const Header = () => {
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul
-                          className="grid gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] text-right"
+                          className="flex flex-col gap-2 text-lg text-light p-4 bg-dark rounded-md shadow-lg"
                           dir="rtl"
                         >
                           {link.subLinks.map((subLink) => (
@@ -46,7 +46,7 @@ const Header = () => {
                               <NavigationMenuLink
                                 href={subLink.href}
                                 active={isLinkActive(subLink.href)}
-                                className={navigationMenuTriggerStyle()}
+                                className={` ${navigationMenuTriggerStyle()}`}
                               >
                                 {subLink.title}
                               </NavigationMenuLink>
