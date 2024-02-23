@@ -14,8 +14,12 @@
     @apply p-4;
   }
 
+  .children {
+    @apply flex my-2;
+  }
+
   .page {
-    @apply flex items-center justify-center container mx-auto bg-red-500 my-2;
+    @apply flex flex-col container mx-auto;
   }
 }
 

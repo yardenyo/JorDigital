@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className="bg-primary font-body app">
         <Header />
         <Pages />
-        {children}
+        <main className="children">{children}</main>
       </body>
     </html>
   );
