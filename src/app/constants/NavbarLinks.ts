@@ -26,10 +26,11 @@ const navBarLinks = [
     id: 3,
     subLinks: [
       {
-        name: "seo",
-        href: "/services/seo",
-        id: 3,
-        title: "קידום אתרים",
+        name: "web",
+        href: "/services/web",
+        isActive: false,
+        id: 1,
+        title: "בניית אתרים",
       },
       {
         name: "branding",
@@ -38,11 +39,10 @@ const navBarLinks = [
         title: "מיתוג",
       },
       {
-        name: "web",
-        href: "/services/web",
-        isActive: false,
-        id: 1,
-        title: "בניית אתרים",
+        name: "seo",
+        href: "/services/seo",
+        id: 3,
+        title: "קידום אתרים",
       },
     ],
     title: "שירותים",
