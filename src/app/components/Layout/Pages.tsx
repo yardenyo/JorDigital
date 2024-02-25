@@ -1,19 +1,23 @@
 "use client";
 
 import { useSelector } from "react-redux";
-import { currentPage, previousPage, nextPage } from "@slices/pageSlice";
+import { currentPage, previousPage, nextPage, count } from "@slices/pageSlice";
 
 const Pages = () => {
-  const currentPageNumber = useSelector(currentPage);
-  const previousPageNumber = useSelector(previousPage);
-  const nextPageNumber = useSelector(nextPage);
+  const current = useSelector(currentPage);
+  const previous = useSelector(previousPage);
+  const next = useSelector(nextPage);
+  const total = useSelector(count);
 
-  const currentPageString =
-    currentPageNumber < 10 ? `0${currentPageNumber}` : currentPageNumber;
-  const prevPageString =
-    previousPageNumber < 10 ? `0${previousPageNumber}` : previousPageNumber;
-  const nextPageString =
-    nextPageNumber < 10 ? `0${nextPageNumber}` : nextPageNumber;
+  const formatPageNumber = (pageNumber: number) =>
+    pageNumber < 10 ? `0${pageNumber}` : pageNumber;
+
+  const formattedPrevious = formatPageNumber(previous);
+  const formattedCurrent = formatPageNumber(current);
+  const formattedNext = formatPageNumber(next);
+
+  const isPreviousPageVisible = current !== 1;
+  const isNextPageVisible = next <= total;
 
   return (
     <section>
@@ -21,19 +25,23 @@ const Pages = () => {
         <div className="flex flex-col text-light">
           <div
             className={`text-2xl mx-12 text-light/50 font-secondary ${
-              currentPageNumber === 1 ? "opacity-0" : ""
+              isPreviousPageVisible ? "opacity-100" : "opacity-0"
             }`}
           >
-            {prevPageString}
+            {formattedPrevious}
           </div>
           <div className="flex flex-row-reverse items-center">
             <div className="line w-12 h-1 bg-accent" />
             <div className="text-2xl mx-4 text-light font-secondary">
-              {currentPageString}
+              {formattedCurrent}
             </div>
           </div>
-          <div className="text-2xl mx-12 text-light/50 font-secondary">
-            {nextPageString}
+          <div
+            className={`text-2xl mx-12 text-light/50 font-secondary ${
+              isNextPageVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {formattedNext}
           </div>
         </div>
       </div>
