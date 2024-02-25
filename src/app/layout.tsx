@@ -3,6 +3,7 @@ import Providers from "@components/Providers";
 import Header from "@components/Layout/Header";
 import Footer from "@components/Layout/Footer";
 import Pages from "@components/Layout/Pages";
+import CustomCursor from "@components/ui/customCursor";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
         <link rel="icon" href="images/favicon.ico" />
       </head>
       <body className="bg-primary font-body app">
+        <CustomCursor />
         <Providers>
           <Header />
           <Pages />
