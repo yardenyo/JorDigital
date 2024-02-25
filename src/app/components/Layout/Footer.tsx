@@ -3,22 +3,22 @@
 import React, { useState, useEffect } from "react";
 import MouseIcon from "@svg/MouseIcon.svg";
 import Image from "next/image";
+import { useSelector } from "react-redux";
+import { currentPage } from "@slices/pageSlice";
 
 type Props = {};
 
 const Footer = (props: Props) => {
   const [iconSize, setIconSize] = useState(30);
+  const page = useSelector(currentPage);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIconSize(40);
-      setTimeout(() => {
-        setIconSize(30);
-      }, 700);
-    }, 15000);
+    setIconSize(40);
 
-    return () => clearInterval(intervalId);
-  }, []);
+    setTimeout(() => {
+      setIconSize(30);
+    }, 200);
+  }, [page]);
 
   return (
     <footer>
