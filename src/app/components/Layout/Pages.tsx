@@ -26,7 +26,7 @@ const Pages = (props: Props) => {
 
   return (
     <section>
-      <div className="absolute top-1/2 left-4 z-50">
+      <div className="fixed top-1/2 left-4 z-50">
         <div className="flex flex-col">
           {prevPage !== 0 && (
             <div className="text-2xl mx-12 text-light/50 font-secondary">
