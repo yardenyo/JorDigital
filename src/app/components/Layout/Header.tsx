@@ -11,8 +11,8 @@ const Header = () => {
     "https://res.cloudinary.com/dbpb6wt0d/image/upload/v1708607759/logo-Photoroom.png-Photoroom_1_ogl2co.png";
 
   return (
-    <header>
-      <nav className="flex justify-between items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 shadow-md backdrop-blur-lg">
+      <nav className="flex justify-between items-center p-4">
         <div className="links hidden lg:flex">
           <NavigationMenu />
         </div>
