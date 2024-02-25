@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Providers from "@components/Providers";
 import Header from "@components/Layout/Header";
 import Footer from "@components/Layout/Footer";
 import Pages from "@components/Layout/Pages";
@@ -21,10 +22,12 @@ export default function RootLayout({
         <link rel="icon" href="images/favicon.ico" />
       </head>
       <body className="bg-primary font-body app">
-        <Header />
-        <Pages />
-        <main className="children">{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <Pages />
+          <main className="children">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
