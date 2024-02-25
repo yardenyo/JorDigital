@@ -14,7 +14,7 @@ type Props = {
 const Section = ({ children, id, className, pageNumber }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
-  const { setPage, getPage } = usePages();
+  const { setPage } = usePages();
 
   useEffect(() => {
     if (isInView) {
