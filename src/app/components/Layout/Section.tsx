@@ -2,7 +2,7 @@
 
 import { ReactNode, useRef, useEffect } from "react";
 import { useInView } from "framer-motion";
-import usePages from "@hooks/usePages";
+import { useDispatch } from "react-redux";
 
 type Props = {
   children: ReactNode;
@@ -14,13 +14,13 @@ type Props = {
 const Section = ({ children, id, className, pageNumber }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
-  const { setPage } = usePages();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (isInView) {
-      setPage(pageNumber);
+      dispatch({ type: "page/setPage", payload: pageNumber });
     }
-  }, [isInView, pageNumber, setPage]);
+  }, [isInView, pageNumber, dispatch]);
 
   return (
     <section className={className} id={id} ref={ref}>
