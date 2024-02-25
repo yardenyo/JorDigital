@@ -4,15 +4,11 @@ import React, { useEffect } from "react";
 import usePages from "@hooks/usePages";
 
 const Pages = () => {
-  const { page, setPage, prevPageNumber, pageNumber, nextPageNumber } =
-    usePages();
+  const { page, prevPageNumber, pageNumber, nextPageNumber } = usePages();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setPage(2);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, [setPage]);
+    console.log({ page, prevPageNumber, pageNumber, nextPageNumber });
+  }, [page, prevPageNumber, pageNumber, nextPageNumber]);
 
   return (
     <section>
