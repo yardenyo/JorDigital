@@ -19,7 +19,7 @@
   }
 
   .page {
-    @apply flex flex-col container mx-auto;
+    @apply flex flex-col container mx-auto h-full;
   }
 }
 
