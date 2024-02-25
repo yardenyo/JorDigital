@@ -6,7 +6,19 @@
 @tailwind utilities;
 
 .page {
-  height: calc(100vh - 4rem - 4rem);
+  height: calc(100vh);
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
 }
 
 @layer utilities {
@@ -18,8 +30,16 @@
     @apply flex flex-col my-2;
   }
 
+  .page-wrapper {
+    @apply snap-y snap-mandatory h-screen overflow-y-auto;
+  }
+
   .page {
-    @apply flex flex-col container mx-auto h-full;
+    @apply flex flex-col container mx-auto h-full snap-start mt-4;
+  }
+
+  .content {
+    @apply flex flex-col justify-center items-center h-full;
   }
 }
 
