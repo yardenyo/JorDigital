@@ -27,8 +27,8 @@ const Home = (props: Props) => {
               />
             </div>
 
-            <div className="absolute top-1/4 left-1/4 w-2/3 h-2/3 border-2 border-light"></div>
-            <div className="absolute bottom-0 right-1/5 w-2/3 h-2/3 bg-light"></div>
+            <div className="absolute top-1/4 left-1/4 w-2/3 h-2/3 border-2 border-light hover:rotate-12 transition-transform duration-500" />
+            <div className="absolute bottom-0 right-1/5 w-2/3 h-2/3 bg-light" />
           </div>
         </div>
       </div>
