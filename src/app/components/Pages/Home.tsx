@@ -19,11 +19,11 @@ const Home = (props: Props) => {
           <div className="w-1/2 flex items-center justify-center relative">
             <div className="image-container relative z-50 hover:transform hover:scale-105 transition-transform duration-500">
               <Image
-                src="https://res.cloudinary.com/dbpb6wt0d/image/upload/v1708955569/%D7%AA%D7%9E%D7%95%D7%A0%D7%94_%D7%A9%D7%9C_WhatsApp__2024-02-26_%D7%91%D7%A9%D7%A2%D7%94_15.50.07_4bd57dce-removebg_rdoobz.png"
+                src="https://res.cloudinary.com/dbpb6wt0d/image/upload/v1708973171/%D7%AA%D7%9E%D7%95%D7%A0%D7%94_%D7%A9%D7%9C_WhatsApp__2024-02-26_%D7%91%D7%A9%D7%A2%D7%94_15.50.07_4bd57dce-removebg_2_p737qi.png"
                 alt="placeholder"
                 className="img-fluid"
-                width={600}
-                height={600}
+                width={480}
+                height={480}
               />
             </div>
 

@@ -23,16 +23,7 @@ const Section = ({ children, id, className, pageNumber }: Props) => {
   }, [isInView, pageNumber, dispatch]);
 
   return (
-    <section
-      className={className}
-      id={id}
-      ref={ref}
-      style={{
-        transform: isInView ? "none" : "translateX(-200px)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.19, 1, 0.22, 1) 0.5s",
-      }}
-    >
+    <section className={className} id={id} ref={ref}>
       {children}
     </section>
   );
