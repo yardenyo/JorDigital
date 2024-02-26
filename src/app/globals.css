@@ -9,10 +9,6 @@
   height: calc(100vh);
 }
 
-body {
-  cursor: none;
-}
-
 .cursor {
   pointer-events: none;
 }
@@ -55,7 +51,7 @@ html {
   }
 
   .page {
-    @apply flex flex-col container mx-auto h-full snap-start mt-4 pt-12 px-4 pb-28 lg:px-8;
+    @apply flex flex-col container mx-auto h-full snap-start mt-4 pt-12 pb-28 px-8;
   }
 
   .content {
@@ -63,7 +59,7 @@ html {
   }
 
   .flex-wrapper {
-    @apply flex flex-col xl:flex-row justify-center items-center h-full gap-4;
+    @apply flex flex-col sm:flex-row justify-center items-center h-full gap-4;
   }
 
   .hoverable {
@@ -80,9 +76,9 @@ html {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground cursor-default sm:cursor-none;
   }
   h1 {
-    @apply text-2xl lg:text-3xl xl:text-4xl text-light text-center xl:text-right;
+    @apply text-2xl lg:text-3xl xl:text-4xl text-light text-center sm:text-right;
   }
 }
