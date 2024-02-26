@@ -27,10 +27,7 @@ const Header = () => {
             {socials.map((social) => (
               <li key={social.id}>
                 <a href={social.href} target="_blank" rel="noreferrer">
-                  <Icon
-                    icon={social.icon}
-                    className="text-light text-xl hover:text-accent transition-all duration-400 ease-in-out"
-                  />
+                  <Icon icon={social.icon} className="social" />
                 </a>
               </li>
             ))}
@@ -38,7 +35,15 @@ const Header = () => {
         </div>
         <div className="logo">
           <Link href="/">
-            <Image src={logo} alt="JorDigital" width={200} height={200} />
+            <Image
+              src={logo}
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="w-[200px] h-full"
+              alt="JorDigital"
+              priority
+            />
           </Link>
         </div>
       </nav>
