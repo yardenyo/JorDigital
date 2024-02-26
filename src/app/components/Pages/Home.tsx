@@ -12,7 +12,7 @@ const Home = (props: Props) => {
           <div className="w-1/2">
             <h1 className="text-4xl text-light">
               הגיע הזמן למצוא את הפוטנציאל
-              <span className="text-accent opacity-0"> המסתתר </span>
+              <span className="hoverable"> המסתתר </span>
               של העסק שלך.
             </h1>
           </div>
