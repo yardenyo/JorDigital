@@ -51,7 +51,7 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <div className="cursor">
+    <div className="cursor hidden sm:block">
       <div className="cursor__ball cursor__ball--big">
         <svg height="40" width="40">
           <circle cx="15" cy="15" r="12" strokeWidth="0"></circle>

@@ -12,11 +12,11 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg">
-      <nav className="flex justify-between items-center p-4">
-        <div className="links hidden lg:flex">
+      <nav className="flex justify-between items-center xl:p-4">
+        <div className="links hidden xl:flex">
           <NavigationMenu />
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex xl:hidden">
           <Icon
             icon="ci:hamburger-md"
             className="text-3xl text-light hover:text-accent"
