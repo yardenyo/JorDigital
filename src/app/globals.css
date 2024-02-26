@@ -69,6 +69,10 @@ html {
   .hoverable {
     @apply text-transparent border-b-2 border-accent hover:text-accent transition-all duration-300;
   }
+
+  .social {
+    @apply text-light text-xl hover:text-accent transition-all duration-300 ease-in-out;
+  }
 }
 
 @layer base {

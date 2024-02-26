@@ -16,14 +16,19 @@ const Home = (props: Props) => {
               של העסק שלך.
             </h1>
           </div>
-          <div className="w-1/2 flex items-center justify-center">
-            <Image
-              src="https://via.placeholder.com/600"
-              alt="placeholder"
-              className="img-fluid"
-              width={600}
-              height={600}
-            />
+          <div className="w-1/2 flex items-center justify-center relative">
+            <div className="image-container relative z-50 hover:transform hover:scale-105 transition-transform duration-500">
+              <Image
+                src="https://res.cloudinary.com/dbpb6wt0d/image/upload/v1708955569/%D7%AA%D7%9E%D7%95%D7%A0%D7%94_%D7%A9%D7%9C_WhatsApp__2024-02-26_%D7%91%D7%A9%D7%A2%D7%94_15.50.07_4bd57dce-removebg_rdoobz.png"
+                alt="placeholder"
+                className="img-fluid"
+                width={600}
+                height={600}
+              />
+            </div>
+
+            <div className="absolute top-1/4 left-1/4 w-2/3 h-2/3 border-2 border-light"></div>
+            <div className="absolute bottom-0 right-1/5 w-2/3 h-2/3 bg-light"></div>
           </div>
         </div>
       </div>
