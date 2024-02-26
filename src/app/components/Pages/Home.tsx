@@ -17,7 +17,7 @@ const Home: React.FC<Props> = () => {
       <div className="content">
         <div className="flex-wrapper">
           <motion.div
-            className="w-1/2"
+            className="w-full sm:w-1/2"
             {...animationProps}
             transition={{ ...animationProps.transition, delay: 1.2 }}
           >
@@ -27,7 +27,7 @@ const Home: React.FC<Props> = () => {
               של העסק שלך.
             </h1>
           </motion.div>
-          <div className="w-1/2 flex items-center justify-center relative">
+          <div className="w-2/3 sm:w-1/2 flex items-center justify-center relative">
             <motion.div
               className="image-container relative z-10 pointer-events-none"
               {...animationProps}
