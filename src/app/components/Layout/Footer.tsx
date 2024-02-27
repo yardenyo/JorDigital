@@ -22,7 +22,7 @@ const Footer = (props: Props) => {
 
   return (
     <footer>
-      <div className="fixed bottom-0 left-0 z-50 w-full h-20 bg-primary flex justify-center items-center transition-all duration-400 ease-in-out">
+      <div className="hidden fixed bottom-0 left-0 z-50 w-full h-20 bg-primary sm:flex justify-center items-center transition-all duration-400 ease-in-out">
         <Image src={MouseIcon} alt="למעלה" width={iconSize} />
       </div>
     </footer>

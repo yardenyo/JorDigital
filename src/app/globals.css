@@ -51,7 +51,7 @@ html {
   }
 
   .page {
-    @apply flex flex-col container mx-auto h-full snap-start mt-4 pt-12 pb-28 px-2 sm:px-8;
+    @apply flex flex-col container mx-auto h-full snap-start mt-4 pt-10 sm:pt-12 pb-12 sm:pb-28 px-2 sm:px-8;
   }
 
   .content {
