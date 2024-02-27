@@ -5,10 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.page {
-  height: calc(100vh);
-}
-
 .cursor {
   pointer-events: none;
 }
@@ -55,11 +51,11 @@ body {
   }
 
   .page {
-    @apply flex flex-col container mx-auto h-full snap-start mt-4 px-2 sm:px-8;
+    @apply flex flex-col justify-center items-center h-full snap-start mt-4;
   }
 
   .content {
-    @apply flex flex-col justify-center items-center h-full;
+    @apply flex flex-col container mx-auto h-[calc(100%-8rem)];
   }
 
   .flex-wrapper {
