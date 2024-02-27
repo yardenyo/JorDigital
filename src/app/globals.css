@@ -24,6 +24,7 @@
 html {
   overflow: scroll;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 body {
   scrollbar-width: thin;
