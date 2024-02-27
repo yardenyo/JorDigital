@@ -27,9 +27,9 @@ const Home: React.FC<Props> = () => {
               של העסק שלך.
             </h1>
           </motion.div>
-          <div className="w-2/3 sm:w-1/2 flex items-center justify-center relative">
+          <div className="w-full sm:w-1/2 flex items-center justify-center relative">
             <motion.div
-              className="image-container relative z-10 pointer-events-none"
+              className="image-container relative z-10 pointer-events-none w-3/4"
               {...animationProps}
               transition={{ ...animationProps.transition, delay: 1 }}
             >
@@ -37,8 +37,8 @@ const Home: React.FC<Props> = () => {
                 src={`https://res.cloudinary.com/dbpb6wt0d/image/upload/v1708973171/%D7%AA%D7%9E%D7%95%D7%A0%D7%94_%D7%A9%D7%9C_WhatsApp__2024-02-26_%D7%91%D7%A9%D7%A2%D7%94_15.50.07_4bd57dce-removebg_2_p737qi.png`}
                 alt="placeholder"
                 className="img-fluid"
-                width={425}
-                height={425}
+                width={460}
+                height={460}
               />
             </motion.div>
 
