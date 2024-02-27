@@ -29,6 +29,10 @@ html {
   overflow: scroll;
   overflow-x: hidden;
 }
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
